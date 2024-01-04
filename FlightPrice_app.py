@@ -55,12 +55,12 @@ elif(choice=='Predict'):
             data = bz2.BZ2File(file, 'rb')
             data = pickle.load(data)
             return data
-        model = decompress_pickle('Flight.pbz2')
-        id=(a,b,c,d,e,f,g,h,i)
-        id_array=np.asarray(id)
-        ir=id_array.reshape(1,-1)
-        p=model.predict(ir)
-        st.write("The predicted price is:-",p[0],'Rs')
+            model = decompress_pickle('Flight.pbz2')
+            id=(a,b,c,d,e,f,g,h,i)
+            id_array=np.asarray(id)
+            ir=id_array.reshape(1,-1)
+            p=model.predict(ir)
+            st.write("The predicted price is:-",p[0],'Rs')
 
 
         
