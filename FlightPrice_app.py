@@ -57,7 +57,7 @@ elif(choice=='Predict'):
             return data
             model = decompress_pickle('Flight.pbz2')            
             p=model.predict([[a,b,c,d,e,f,g,h,i]])
-        st.write("The predicted price is:-",p[0],'Rs')
+            st.write("The predicted price is:-",p[0],'Rs')
 
 
         
