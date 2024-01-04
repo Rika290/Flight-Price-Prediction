@@ -7,7 +7,7 @@ import bz2
 #setting up the page title,icons
 
 st.set_page_config(page_title="Flight Price Predictor",page_icon="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1677184597.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*")
-st.sidebar.image('https://wallpapers.com/images/featured/airplane-window-bubpfgncon8zd3ew.jpg')
+st.sidebar.image('https://media.istockphoto.com/id/1392494719/photo/woman-with-pink-suitcase-and-passport-with-boarding-pass-standing-on-passengers-ladder-of.jpg?s=612x612&w=0&k=20&c=MVUZvIdaUmvRKdG-B5EEGGkIVFj51jss-b6IkxqY3fg=')
 choice=st.sidebar.selectbox('Menu',('Home','Predict'))
 st.sidebar.image('https://i.pinimg.com/736x/0d/1e/96/0d1e967cde176af6f8f0568af424d07b.jpg')
 if(choice=='Home'):
