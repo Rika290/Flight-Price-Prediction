@@ -50,12 +50,7 @@ elif(choice=='Predict'):
     h=st.number_input('Duration')
     i=st.number_input('Days left')
     btn=st.button('Check')
-    if btn:
-        compressed_pickle('Flight', rf)
-        def decompress_pickle(file):
-            data = bz2.BZ2File(file, 'rb')
-            data = pickle.load(data)
-            return data
+    if btn:        
         model = decompress_pickle('Flight.pbz2')
         p=model.predict([[a,b,c,d,e,f,g,h,i]])
         st.write("The predicted price is:-",p[0],'Rs')
