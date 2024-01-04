@@ -51,12 +51,10 @@ elif(choice=='Predict'):
     i=st.number_input('Days left')
     btn=st.button('Check')
     if btn:        
-        model = decompress_pickle('Flight.pbz2')
+        model = pickle.load('Flight.pbz2','rb')
         p=model.predict([[a,b,c,d,e,f,g,h,i]])
         st.write("The predicted price is:-",p[0],'Rs')
     
-        
-
 
 
         
