@@ -51,6 +51,7 @@ elif(choice=='Predict'):
     i=st.number_input('Days left')
     btn=st.button('Check')
     if btn:
+        compressed_pickle('Flight', rf)
         def decompress_pickle(file):
             data = bz2.BZ2File(file, 'rb')
             data = pickle.load(data)
