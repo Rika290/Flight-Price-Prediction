@@ -20,7 +20,7 @@ if(choice=='Home'):
 elif(choice=='Predict'):
     st.text('Kindly fill your flight details to view the predicted price')
     st.image('https://media.istockphoto.com/id/955952680/photo/passengers-commercial-airplane-flying-above-clouds.jpg?s=612x612&w=0&k=20&c=9bZsGq8-uZaPXR1lCztXur4JRlI1gNksYOOSZzfXPAA=')
-    ch=st.selectbox('Airline',('Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
+    ch=st.selectbox('Airline✈',('Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
     if(ch=='Vistara'):
         a=5
     elif(ch=='Air India'):
@@ -97,8 +97,8 @@ elif(choice=='Predict'):
         g=1
     else:
         g=0        
-    h=st.number_input('Duration')
-    i=st.number_input('Days left')
+    h=st.number_input('Duration 🕗')
+    i=st.number_input('Days left 📅')
     btn=st.button('Check')
     if btn:
         def decompress_pickle(file):
