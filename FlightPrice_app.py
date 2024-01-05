@@ -11,7 +11,7 @@ st.sidebar.title('MENU BAR')
 st.sidebar.text('Click here for further details😊')
 choice=st.sidebar.selectbox('Choose',('Home','Predict'))
 st.sidebar.image('https://e0.pxfuel.com/wallpapers/209/716/desktop-wallpaper-untitled-airplane-sky-aesthetic-travel.jpg')
-st.sidebar.image('https://i.pinimg.com/736x/b0/30/e1/b030e17035d915fca35dc6d7a18b1934.jpg')
+st.sidebar.image('https://feeds.abplive.com/onecms/images/uploaded-images/2021/09/08/634259599cd6f60c24f9e67a5680c064_original.jpg')
 if(choice=='Home'):
     st.title('Welcome to Flight Price Predictor')
     st.text('🙏😊')
