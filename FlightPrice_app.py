@@ -111,6 +111,7 @@ elif(choice=='Predict'):
         st.write("The predicted price is:-",pred[0],'Rs')
         st.header('Time to fly 😁✈🧳')
         st.image('https://image.cnbcfm.com/api/v1/image/106537227-1589463911434gettyimages-890234318.jpeg?v=1589463982&w=1600&h=900')
+        st.image('pic.jpg')
     
         
 
