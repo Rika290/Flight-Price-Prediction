@@ -7,7 +7,7 @@ import bz2
 #setting up the page title,icons
 
 st.set_page_config(page_title="Flight Price Predictor",page_icon="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1677184597.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*")
-st.sidebar.image('https://wallpapers.com/images/featured/airplane-window-bubpfgncon8zd3ew.jpg')
+st.sidebar.image('https://e0.pxfuel.com/wallpapers/209/716/desktop-wallpaper-untitled-airplane-sky-aesthetic-travel.jpg')
 choice=st.sidebar.selectbox('Menu',('Home','Predict'))
 st.sidebar.image('https://i.pinimg.com/736x/0d/1e/96/0d1e967cde176af6f8f0568af424d07b.jpg')
 if(choice=='Home'):
@@ -20,7 +20,7 @@ if(choice=='Home'):
 elif(choice=='Predict'):
     st.text('Kindly fill your flight details to view the predicted price')
     st.image('https://media.istockphoto.com/id/955952680/photo/passengers-commercial-airplane-flying-above-clouds.jpg?s=612x612&w=0&k=20&c=9bZsGq8-uZaPXR1lCztXur4JRlI1gNksYOOSZzfXPAA=')
-    ch=st.selectbox('Airline✈',('Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
+    ch=st.selectbox('Airline ✈',('Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
     if(ch=='Vistara'):
         a=5
     elif(ch=='Air India'):
