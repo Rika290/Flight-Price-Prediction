@@ -20,7 +20,6 @@ if(choice=='Home'):
 elif(choice=='Predict'):
     st.text('Kindly fill your flight details to view the predicted price')
     st.image('https://feeds.abplive.com/onecms/images/uploaded-images/2021/09/08/634259599cd6f60c24f9e67a5680c064_original.jpg')
-    #st.image('https://media.istockphoto.com/id/955952680/photo/passengers-commercial-airplane-flying-above-clouds.jpg?s=612x612&w=0&k=20&c=9bZsGq8-uZaPXR1lCztXur4JRlI1gNksYOOSZzfXPAA=')
     ch=st.selectbox('Airline ✈',('Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
     if(ch=='Vistara'):
         a=5
