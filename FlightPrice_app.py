@@ -7,7 +7,7 @@ import bz2
 #setting up the page title,icons
 
 st.set_page_config(page_title="Flight Price Predictor",page_icon="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1677184597.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*")
-st.sidebar.image('https://media.istockphoto.com/id/1392494719/photo/woman-with-pink-suitcase-and-passport-with-boarding-pass-standing-on-passengers-ladder-of.jpg?s=612x612&w=0&k=20&c=MVUZvIdaUmvRKdG-B5EEGGkIVFj51jss-b6IkxqY3fg=')
+st.sidebar.image('https://wallpapers.com/images/featured/airplane-window-bubpfgncon8zd3ew.jpg')
 choice=st.sidebar.selectbox('Menu',('Home','Predict'))
 st.sidebar.image('https://i.pinimg.com/736x/0d/1e/96/0d1e967cde176af6f8f0568af424d07b.jpg')
 if(choice=='Home'):
@@ -20,39 +20,83 @@ if(choice=='Home'):
 elif(choice=='Predict'):
     st.text('Kindly fill your flight details to view the predicted price')
     st.image('https://media.istockphoto.com/id/955952680/photo/passengers-commercial-airplane-flying-above-clouds.jpg?s=612x612&w=0&k=20&c=9bZsGq8-uZaPXR1lCztXur4JRlI1gNksYOOSZzfXPAA=')
-    ch=st.toggle('Airline',['Airline name'])
-    if ch:
-        q=pd.DataFrame(data=['Vistara','Air_India','Indigo','GO_FIRST','AirAsia','SpiceJet'],columns=['Airline Name'])
-        q['Code']=[5,1,3,2,0,4]
-        st.dataframe(q)
-    cv=st.toggle('Place & Time',['Source'])
-    if cv:
-        q=pd.DataFrame(data=['Delhi','Mumbai','Bangalore','Kolkata','Hyderabad','Chennai'],columns=['Source City'])
-        q['Code for Source City']=[2,5,0,4,3,1]
-        q['Destination City']=['Mumbai','Delhi','Bangalore','Kolkata','Hyderabad','Chennai']
-        q['Code for Destination City']=[5,2,0,4,3,1]        
-        q['Departure time']=['Morning','Early_Morning','Evening','Night','Afternoon','Late_Night']
-        q['Code for Departure']=[4,1,2,5,0,3]
-        q['Arrival time']=['Night','Evening','Morning','Afternoon','Early_Morning','Late_Night']
-        q['Code for Arrival time']=[5,2,4,0,1,3]
-        st.dataframe(q)
-    by=st.toggle('Stops',['Stop'])
-    if by:
-        q=pd.DataFrame(data=['one','zero','two_or_more'])
-        q['Code']=[0,2,1]
-        st.dataframe(q)
-    bh=st.toggle('Class',['Class'])
-    if bh:
-        q=pd.DataFrame(data=['Economy','Business'],columns=['Class'])
-        q['Code']=[1,0]
-        st.dataframe(q)
-    a=st.number_input('Airline name')
-    b=st.number_input('Source City')
-    c=st.number_input('Departure time')
-    d=st.number_input('stops')
-    e=st.number_input('Arrival time')
-    f=st.number_input('Destination City')
-    g=st.number_input('Class')
+    ch=st.selectbox('Airline',('Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
+    if(ch=='Vistara'):
+        a=5
+    elif(ch=='Air India'):
+        a=1
+    elif(ch=='Indigo'):
+        a=3
+    elif(ch=='GO FIRST'):
+        a=2
+    elif(ch=='AirAsia'):
+        a=0
+    elif(ch=='SpiceJet'):
+        a=4        
+    cg=st.selectbox('From',('Delhi','Mumbai','Bangalore','Kolkata','Hyderabad','Chennai'))
+    if(cg=='Delhi'):
+        b=2
+    elif(cg=='Mumbai'):
+        b=5
+    elif(cg=='Bangalore'):
+        b=0
+    elif(cg=='Kolkata'):
+        b=4
+    elif(cg=='Hyderabad'):
+        b=3
+    else:
+        b=1
+    cf=st.selectbox('Departure time',('Morning','Early Morning','Evening','Night','Afternoon','Late Night'))
+    if(cf=='Morning'):
+        c=4
+    elif(cf=='Early Morning'):
+        c=1
+    elif(cf=='Evening'):
+        c=2
+    elif(cf=='Night'):
+        c=5
+    elif(cf=='Afternoon'):
+        c=0
+    elif(cf=='Late Night'):
+        c=3
+    ci=st.selectbox('Stops',('one','zero','two or more'))
+    if(ci=='one'):
+        d=0
+    elif(ci=='zero'):
+        d=2
+    elif(ci=='two or more'):
+        d=1
+    cs=st.selectbox('Arrival time',('Night','Evening','Morning','Afternoon','Early Morning','Late Night'))
+    if(cs=='Night'):
+        e=5
+    elif(cs=='Evening'):
+        e=2
+    elif(cs=='Morning'):
+        e=4
+    elif(cs=='Afternoon'):
+        e=0
+    elif(cs=='Early Morning'):
+        e=1
+    elif(cs=='Late Night'):
+        e=3
+    cx=st.selectbox('Destination',('Mumbai','Delhi','Bangalore','Kolkata','Hyderabad','Chennai'))
+    if(cx=='Mumbai'):
+        f=5
+    elif(cx=='Delhi'):
+        f=2
+    elif(cx=='Bangalore'):
+        f=0
+    elif(cx=='Kolkata'):
+        f=4
+    elif(cx=='Hyderabad'):
+        f=3
+    elif(cx=='Chennai'):
+        f=1
+    cb=st.selectbox('Class',('Economy','Business'))
+    if(cb=='Economy'):
+        g=1
+    else:
+        g=0        
     h=st.number_input('Duration')
     i=st.number_input('Days left')
     btn=st.button('Check')
@@ -62,9 +106,13 @@ elif(choice=='Predict'):
             data = pickle.load(data)
             return data
         model = decompress_pickle('Flight.pbz2')
-        p=model.predict([[a,b,c,d,e,f,g,h,i]])
-        st.write("The predicted price is:-",p[0],'Rs')
+        pred=model.predict([[a,b,c,d,e,f,g,h,i]])
+        st.write("The predicted price is:-",pred[0],'Rs')
         st.header('Time to fly 😁✈🧳')
+        st.image('https://image.cnbcfm.com/api/v1/image/106537227-1589463911434gettyimages-890234318.jpeg?v=1589463982&w=1600&h=900')
+    
+        
+
 
 
         
