@@ -16,6 +16,7 @@ if(choice=='Home'):
     st.title('Welcome to Flight Price Predictor')
     st.text('🙏😊')
     st.text('Hi. Want to predict your flight ticket price❓❓')
+    st.image('https://www.pennmedicine.org/-/media/images/miscellaneous/random%20generic%20photos/person_at_airport_holding_coffee_and_luggage.ashx?mw=620&mh=408')
     st.image('fl.jpg')
 elif(choice=='Predict'):
     st.text('Kindly fill your flight details to view the predicted price')
