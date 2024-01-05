@@ -9,8 +9,8 @@ import bz2
 st.set_page_config(page_title="Flight Price Predictor",page_icon="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1677184597.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*")
 st.sidebar.title('MENU BAR')
 st.sidebar.text('Click here for further details😊')
-st.sidebar.image('https://e0.pxfuel.com/wallpapers/209/716/desktop-wallpaper-untitled-airplane-sky-aesthetic-travel.jpg')
 choice=st.sidebar.selectbox('Choose',('Home','Predict'))
+st.sidebar.image('https://e0.pxfuel.com/wallpapers/209/716/desktop-wallpaper-untitled-airplane-sky-aesthetic-travel.jpg')
 st.sidebar.image('https://i.pinimg.com/736x/b0/30/e1/b030e17035d915fca35dc6d7a18b1934.jpg')
 if(choice=='Home'):
     st.title('Welcome to Flight Price Predictor')
