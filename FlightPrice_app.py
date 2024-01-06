@@ -13,9 +13,8 @@ st.sidebar.image('https://e0.pxfuel.com/wallpapers/209/716/desktop-wallpaper-unt
 st.sidebar.image('https://i.pinimg.com/736x/0d/1e/96/0d1e967cde176af6f8f0568af424d07b.jpg')
 if(choice=='Home'):
     st.title('Welcome to Flight Price Predictor')
-    st.text('🙏😊')
     st.text('Hi. Want to predict your flight ticket price❓❓')
-    st.text('Click the Menu bar for further details😊')
+    st.text('Click the Menu bar for further details')
     st.image('https://www.pennmedicine.org/-/media/images/miscellaneous/random%20generic%20photos/person_at_airport_holding_coffee_and_luggage.ashx?mw=620&mh=408')
 elif(choice=='Predict'):
     st.text('Kindly fill your flight details to view the predicted price')
