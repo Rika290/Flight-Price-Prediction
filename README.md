@@ -1,6 +1,6 @@
+Link for the Streamlit App:- https://flight-ticket-price-predictor.streamlit.app/
 ![Uploading image.png…]()
 
-Link for the Streamlit App:- https://flight-ticket-price-predictor.streamlit.app/
 
 OVERVIEW:-
 - A Streamlit app for predicting flight ticket price is deployed with the help of Machine Learning and Python programming language
