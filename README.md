@@ -1,4 +1,3 @@
-![image](https://github.com/Rika290/Flight-Price-Prediction/assets/126352441/64478008-6b7f-4a06-a53c-b61d46446612)
 
 Link for the Streamlit App:- https://flight-ticket-price-predictor.streamlit.app/
 
