@@ -19,7 +19,7 @@ if(choice=='Home'):
 elif(choice=='Predict'):
     st.text('Kindly fill your flight details to view the predicted price')
     st.image('https://feeds.abplive.com/onecms/images/uploaded-images/2021/09/08/634259599cd6f60c24f9e67a5680c064_original.jpg')
-    ch=st.selectbox('Airline',('Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
+    ch=st.selectbox('Airline',('Select','Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
     if(ch=='Vistara'):
         a=5
     elif(ch=='Air India'):
@@ -32,7 +32,7 @@ elif(choice=='Predict'):
         a=0
     elif(ch=='SpiceJet'):
         a=4        
-    cg=st.selectbox('From',('Delhi','Mumbai','Bangalore','Kolkata','Hyderabad','Chennai'))
+    cg=st.selectbox('From',('Select','Delhi','Mumbai','Bangalore','Kolkata','Hyderabad','Chennai'))
     if(cg=='Delhi'):
         b=2
     elif(cg=='Mumbai'):
@@ -45,7 +45,7 @@ elif(choice=='Predict'):
         b=3
     else:
         b=1
-    cf=st.selectbox('Departure time',('Morning','Early Morning','Evening','Night','Afternoon','Late Night'))
+    cf=st.selectbox('Departure time',('Select','Morning','Early Morning','Evening','Night','Afternoon','Late Night'))
     if(cf=='Morning'):
         c=4
     elif(cf=='Early Morning'):
@@ -58,14 +58,14 @@ elif(choice=='Predict'):
         c=0
     elif(cf=='Late Night'):
         c=3
-    ci=st.selectbox('Stops',('one','zero','two or more'))
+    ci=st.selectbox('Stops',('Select','one','zero','two or more'))
     if(ci=='one'):
         d=0
     elif(ci=='zero'):
         d=2
     elif(ci=='two or more'):
         d=1
-    cs=st.selectbox('Arrival time',('Night','Evening','Morning','Afternoon','Early Morning','Late Night'))
+    cs=st.selectbox('Arrival time',('Select','Night','Evening','Morning','Afternoon','Early Morning','Late Night'))
     if(cs=='Night'):
         e=5
     elif(cs=='Evening'):
@@ -78,7 +78,7 @@ elif(choice=='Predict'):
         e=1
     elif(cs=='Late Night'):
         e=3
-    cx=st.selectbox('Destination',('Mumbai','Delhi','Bangalore','Kolkata','Hyderabad','Chennai'))
+    cx=st.selectbox('Destination',('Select','Mumbai','Delhi','Bangalore','Kolkata','Hyderabad','Chennai'))
     if(cx=='Mumbai'):
         f=5
     elif(cx=='Delhi'):
@@ -91,7 +91,7 @@ elif(choice=='Predict'):
         f=3
     elif(cx=='Chennai'):
         f=1
-    cb=st.selectbox('Class',('Economy','Business'))
+    cb=st.selectbox('Class',('Select','Economy','Business'))
     if(cb=='Economy'):
         g=1
     else:
