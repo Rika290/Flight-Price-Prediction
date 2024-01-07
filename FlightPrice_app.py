@@ -96,8 +96,8 @@ elif(choice=='Predict'):
         g=1
     else:
         g=0        
-    h=st.number_input('Duration 🕗')
-    i=st.number_input('Days left 📅')
+    h=st.number_input('Duration')
+    i=st.number_input('Days left')
     btn=st.button('Check')
     if btn:
         def decompress_pickle(file):
@@ -107,7 +107,7 @@ elif(choice=='Predict'):
         model = decompress_pickle('Flight.pbz2')
         pred=model.predict([[a,b,c,d,e,f,g,h,i]])
         st.write("The predicted price is:-",pred[0],'Rs')
-        st.header('Time to fly 😁✈🧳')
+        st.header('Time to fly ✈🧳')
         st.image('https://image.cnbcfm.com/api/v1/image/106537227-1589463911434gettyimages-890234318.jpeg?v=1589463982&w=1600&h=900')
     
         
