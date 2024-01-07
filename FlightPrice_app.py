@@ -19,7 +19,7 @@ if(choice=='Home'):
 elif(choice=='Predict'):
     st.text('Kindly fill your flight details to view the predicted price')
     st.image('https://feeds.abplive.com/onecms/images/uploaded-images/2021/09/08/634259599cd6f60c24f9e67a5680c064_original.jpg')
-    ch=st.selectbox('Airline ✈',('Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
+    ch=st.selectbox('Airline',('Vistara','Air India','Indigo','GO FIRST','AirAsia','SpiceJet'))
     if(ch=='Vistara'):
         a=5
     elif(ch=='Air India'):
