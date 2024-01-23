@@ -31,20 +31,86 @@ elif(choice=='Predict'):
     elif(ch=='AirAsia'):
         a=0
     elif(ch=='SpiceJet'):
-        a=4        
+        a=4
     cg=st.selectbox('From',('Select','Delhi','Mumbai','Bangalore','Kolkata','Hyderabad','Chennai'))
     if(cg=='Delhi'):
         b=2
+        cx=st.selectbox('Destination',('Select','Mumbai','Bangalore','Kolkata','Hyderabad','Chennai'))
+        if(cx=='Mumbai'):
+            f=5
+        elif(cx=='Bangalore'):
+            f=0
+        elif(cx=='Kolkata'):
+            f=4
+        elif(cx=='Hyderabad'):
+            f=3
+        elif(cx=='Chennai'):
+            f=1
     elif(cg=='Mumbai'):
         b=5
+        cx=st.selectbox('Destination',('Select','Delhi','Bangalore','Kolkata','Hyderabad','Chennai'))
+        if(cx=='Delhi'):
+            f=2
+        elif(cx=='Bangalore'):
+            f=0
+        elif(cx=='Kolkata'):
+            f=4
+        elif(cx=='Hyderabad'):
+            f=3
+        elif(cx=='Chennai'):
+            f=1
     elif(cg=='Bangalore'):
         b=0
+        cx=st.selectbox('Destination',('Select','Mumbai','Delhi','Kolkata','Hyderabad','Chennai'))
+        if(cx=='Mumbai'):
+            f=5
+        elif(cx=='Delhi'):
+            f=2
+        elif(cx=='Kolkata'):
+            f=4
+        elif(cx=='Hyderabad'):
+            f=3
+        elif(cx=='Chennai'):
+            f=1
     elif(cg=='Kolkata'):
         b=4
+        cx=st.selectbox('Destination',('Select','Mumbai','Delhi','Bangalore','Hyderabad','Chennai'))
+        if(cx=='Mumbai'):
+            f=5
+        elif(cx=='Delhi'):
+            f=2
+        elif(cx=='Bangalore'):
+            f=0
+        elif(cx=='Hyderabad'):
+            f=3
+        elif(cx=='Chennai'):
+            f=1
     elif(cg=='Hyderabad'):
         b=3
+        cx=st.selectbox('Destination',('Select','Mumbai','Delhi','Bangalore','Kolkata','Chennai'))
+        if(cx=='Mumbai'):
+            f=5
+        elif(cx=='Delhi'):
+            f=2
+        elif(cx=='Bangalore'):
+            f=0
+        elif(cx=='Kolkata'):
+            f=4
+        elif(cx=='Chennai'):
+            f=1
     else:
         b=1
+        cx=st.selectbox('Destination',('Select','Mumbai','Delhi','Bangalore','Kolkata','Hyderabad'))
+        if(cx=='Mumbai'):
+            f=5
+        elif(cx=='Delhi'):
+            f=2
+        elif(cx=='Bangalore'):
+            f=0
+        elif(cx=='Kolkata'):
+            f=4
+        elif(cx=='Hyderabad'):
+            f=3                        
     cf=st.selectbox('Departure time',('Select','Morning','Early Morning','Evening','Night','Afternoon','Late Night'))
     if(cf=='Morning'):
         c=4
@@ -77,20 +143,7 @@ elif(choice=='Predict'):
     elif(cs=='Early Morning'):
         e=1
     elif(cs=='Late Night'):
-        e=3
-    cx=st.selectbox('Destination',('Select','Mumbai','Delhi','Bangalore','Kolkata','Hyderabad','Chennai'))
-    if(cx=='Mumbai'):
-        f=5
-    elif(cx=='Delhi'):
-        f=2
-    elif(cx=='Bangalore'):
-        f=0
-    elif(cx=='Kolkata'):
-        f=4
-    elif(cx=='Hyderabad'):
-        f=3
-    elif(cx=='Chennai'):
-        f=1
+        e=3    
     cb=st.selectbox('Class',('Select','Economy','Business'))
     if(cb=='Economy'):
         g=1
