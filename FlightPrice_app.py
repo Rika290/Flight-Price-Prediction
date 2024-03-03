@@ -15,7 +15,7 @@ if(choice=='Home'):
     st.title('Welcome to Flight Price Predictor')
     st.text('Hi. Want to predict your flight ticket price❓❓')
     st.text('Click the Menu bar for further details')
-    st.image('https://www.pennmedicine.org/-/media/images/miscellaneous/random%20generic%20photos/person_at_airport_holding_coffee_and_luggage.ashx?mw=620&mh=408')
+    st.image('https://wallpapers.com/images/featured/airport-w6v47yjhxcohsjgf.jpg')
 elif(choice=='Predict'):
     st.text('Kindly fill your flight details to view the predicted price')
     st.image('https://feeds.abplive.com/onecms/images/uploaded-images/2021/09/08/634259599cd6f60c24f9e67a5680c064_original.jpg')
